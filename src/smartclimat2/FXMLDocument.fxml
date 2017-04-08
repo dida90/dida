@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="608.999977929685" prefWidth="926.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="smartclimat2.FXMLDocumentController">
+  <children>
+    <Label fx:id="label" layoutX="138.0" layoutY="281.0" minHeight="16.0" minWidth="69.0" />
+   <Button fx:id="parcourir" layoutX="2.0" layoutY="1.0" mnemonicParsing="false" onAction="#importer_fichier" text="parcourir" />
+    <TableView fx:id="table_donne" layoutX="224.0" layoutY="26.0" prefHeight="255.0" prefWidth="369.0" />
+    <ComboBox fx:id="choix_ville" layoutX="47.0" layoutY="140.0" prefHeight="21.0" prefWidth="89.0" promptText="choix_ville">
+      <items>
+        <FXCollections fx:factory="observableArrayList" />
+      </items>
+    </ComboBox>
+    <ComboBox fx:id="annee" layoutX="136.0" layoutY="170.0" promptText="annee">
+      <items>
+        <FXCollections fx:factory="observableArrayList" />
+      </items>
+    </ComboBox>
+    <ComboBox fx:id="mois" layoutX="69.0" layoutY="170.0" promptText="mois">
+      <items>
+        <FXCollections fx:factory="observableArrayList" />
+      </items>
+    </ComboBox>
+    <ComboBox fx:id="jours" layoutX="9.0" layoutY="169.0" promptText="Jours">
+      <items>
+        <FXCollections fx:factory="observableArrayList" />
+      </items>
+    </ComboBox>
+    <Button fx:id="afficher_courbe" layoutX="22.0" layoutY="280.0" mnemonicParsing="false" onAction="#afficher_courbe" text="afficher_courbe" />
+    <CheckBox fx:id="temp_k" layoutX="19.0" layoutY="203.0" mnemonicParsing="false" text="temp_k" />
+    <CheckBox id="temp_k" fx:id="temp_c" layoutX="19.0" layoutY="222.0" mnemonicParsing="false" text="temp_c" />
+    <CheckBox id="temp_k" fx:id="humidite" layoutX="20.0" layoutY="240.0" mnemonicParsing="false" text="humidite" />
+    <CheckBox id="temp_k" fx:id="nebulosite" layoutX="20.0" layoutY="258.0" mnemonicParsing="false" text="nebulosite" />
+    <ListView fx:id="liste" layoutX="5.0" layoutY="26.0" prefHeight="105.0" prefWidth="188.0" />
+    <Separator layoutX="-11.0" layoutY="303.0" prefWidth="870.0" />
+    <LineChart fx:id="courbe" layoutX="222.0" layoutY="314.0" prefHeight="277.0" prefWidth="395.0" title="Courbe">
+      <xAxis>
+        <NumberAxis fx:id="xAxis" prefWidth="0.0" side="BOTTOM" />
+      </xAxis>
+      <yAxis>
+        <NumberAxis fx:id="yAxis" side="LEFT" />
+      </yAxis>
+    </LineChart>
+    <ComboBox fx:id="ville1" layoutX="13.0" layoutY="321.0" promptText="ville1">
+      <items>
+        <FXCollections fx:factory="observableArrayList" />
+      </items>
+    </ComboBox>
+    <ComboBox fx:id="ville2" layoutX="136.0" layoutY="321.0" promptText="ville2">
+      <items>
+        <FXCollections fx:factory="observableArrayList" />
+      </items>
+    </ComboBox>
+    <ComboBox fx:id="annee_v1" layoutX="13.0" layoutY="353.0" promptText="annee_v1">
+      <items>
+        <FXCollections fx:factory="observableArrayList" />
+      </items>
+    </ComboBox>
+    <ComboBox fx:id="mois_v1" layoutX="14.0" layoutY="387.0" promptText="mois_v1">
+      <items>
+        <FXCollections fx:factory="observableArrayList" />
+      </items>
+    </ComboBox>
+    <ComboBox fx:id="jour_v1" layoutX="14.0" layoutY="420.0" promptText="jour_v1">
+      <items>
+        <FXCollections fx:factory="observableArrayList" />
+      </items>
+    </ComboBox>
+    <ComboBox fx:id="annee_v2" layoutX="135.0" layoutY="352.0" promptText="annee_v2">
+      <items>
+        <FXCollections fx:factory="observableArrayList" />
+      </items>
+    </ComboBox>
+    <ComboBox fx:id="mois_v2" layoutX="135.0" layoutY="385.0" promptText="mois_v2">
+      <items>
+        <FXCollections fx:factory="observableArrayList" />
+      </items>
+    </ComboBox>
+    <ComboBox fx:id="jour_v2" layoutX="135.0" layoutY="420.0" promptText="jour_v2">
+      <items>
+        <FXCollections fx:factory="observableArrayList" />
+      </items>
+    </ComboBox>
+    <ComboBox id="comparaison" fx:id="c_comparaison" layoutX="55.0" layoutY="454.0" prefHeight="21.0" prefWidth="102.0" promptText="critaire comparaison">
+      <items>
+        <FXCollections fx:factory="observableArrayList" />
+      </items>
+    </ComboBox>
+    <Button fx:id="comparaison" layoutX="60.0" layoutY="491.0" mnemonicParsing="false" text="comparaison" />
+    <Separator layoutX="99.0" layoutY="321.0" orientation="VERTICAL" prefHeight="120.0" />
+  </children>
+</AnchorPane>
